@@ -10,6 +10,7 @@ const fetchuser=(req,res,next)=>{
     }
     try {
         const data = jwt.verify(token,jwtSecret)
+        
         req.user=data.user
     } catch (error) {
         // console.log(error)
